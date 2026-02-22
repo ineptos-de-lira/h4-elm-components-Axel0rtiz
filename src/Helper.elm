@@ -36,8 +36,9 @@ hipervinculo url etiqueta =
     a [ href url ] [ text etiqueta ]
 
 
-
--- Puedes usar una definición como la siguiente para probar y visualizar tus resultados, solo debes definir "headers" y "hyperlink"
---main : Html.Html msg
---main =
---    Html.div [] [ headers "Titulos", hyperlink "https://upa.edu.mx" "My School" ]
+main : Html msg
+main =
+    div []
+        [ encabezados "Mis Títulos"
+        , hipervinculo "https://upa.edu.mx" "Mi Universidad"
+        ]
