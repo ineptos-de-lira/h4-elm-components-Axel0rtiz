@@ -19,8 +19,8 @@ evalChars list funTrans =
     List.map funTrans list
 
 
-encabezados : String -> Html msg
-encabezados param =
+headers : String -> Html msg
+headers param =
     div []
         [ h1 [] [ text param ]
         , h2 [] [ text param ]
@@ -31,14 +31,14 @@ encabezados param =
         ]
 
 
-hipervinculo : String -> String -> Html msg
-hipervinculo url etiqueta =
+hyperlink : String -> String -> Html msg
+hyperlink url etiqueta =
     a [ href url ] [ text etiqueta ]
 
 
 main : Html msg
 main =
     div []
-        [ encabezados "Mis Títulos"
-        , hipervinculo "https://upa.edu.mx" "Mi Universidad"
+        [ headers "Mis Títulos"
+        , hyperlink "https://upa.edu.mx" "Mi Universidad"
         ]
